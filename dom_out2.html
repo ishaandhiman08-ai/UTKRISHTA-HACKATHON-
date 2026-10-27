@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Stream ΓÇö Sentinel ┬╖ NAB Benchmark</title>
+    <meta name="description" content="Connected to numenta/NAB benchmark repository on GitHub. Adaptive streaming anomaly detection workspace.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: hsl(224 45% 5%);
+        color: hsl(213 31% 92%);
+        overflow-x: hidden;
+      }
+      .font-mono {
+        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased selection:bg-signal/30 selection:text-signal">
+    <div class="min-h-screen">
+      <!-- Accessible Skip to content -->
+      <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:border focus:border-signal/50 focus:bg-card focus:px-3 focus:py-2 focus:text-xs focus:text-foreground">
+        Skip to content
+      </a>
+
+      <!-- Desktop Sidebar -->
+      <div class="fixed inset-y-0 left-0 z-40 hidden lg:block">
+        <aside class="flex h-full flex-col border-r border-sidebar-border bg-sidebar/95 backdrop-blur w-64">
+          <!-- Sidebar Header / Brand -->
+          <div class="flex h-16 items-center border-b border-sidebar-border px-4 justify-between">
+            <a aria-label="Sentinel overview" href="#overview" data-nav="overview" class="cursor-pointer bg-signal/15 text-signal font-semibold border-l-2 border-signal">
+              <div class="flex items-center gap-2.5">
+                <span class="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-signal/30 bg-gradient-to-br from-signal/25 to-iris/25 shadow-[0_0_18px_-6px_hsl(var(--signal)/0.8)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert h-4.5 w-4.5 text-signal">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="M12 8v4"></path>
+                    <path d="M12 16h.01"></path>
+                  </svg>
+                </span>
+                <span class="leading-tight">
+                  <span class="block text-[15px] font-semibold tracking-tight text-foreground">Sentinel</span>
+                  <span class="block text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Anomaly detection</span>
+                </span>
+              </div>
+            </a>
+            <button type="button" class="hidden rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-sidebar-accent hover:text-foreground lg:inline-flex" aria-label="Collapse sidebar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-4 w-4">
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav class="flex-1 space-y-1 overflow-y-auto px-3 py-4" aria-label="Main navigation">
+            <p class="px-2 pb-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground/70">
+              Live Monitoring
+            </p>
+            <a data-nav="overview" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 hover:bg-sidebar-accent hover:text-foreground cursor-pointer bg-signal/15 text-signal font-semibold border-l-2 border-signal" href="#overview">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+              </svg>
+              <span class="truncate">Overview</span>
+            </a>
+            <a data-nav="live" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#live">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-radio h-4 w-4 shrink-0 text-signal">
+                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                <circle cx="12" cy="12" r="2"></circle>
+                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+              </svg>
+              <span class="truncate">Live stream</span>
+              <span class="ml-auto h-1.5 w-1.5 rounded-full bg-signal"></span>
+            </a>
+            <a data-nav="history" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#history">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+                <path d="M12 7v5l4 2"></path>
+              </svg>
+              <span class="truncate">Stream history</span>
+            </a>
+            <a data-nav="analytics" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#analytics">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <path d="M3 3v18h18"></path>
+                <path d="M18 17V9"></path>
+                <path d="M13 17V5"></path>
+                <path d="M8 17v-3"></path>
+              </svg>
+              <span class="truncate">Analytics</span>
+            </a>
+            <a data-nav="settings" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#settings">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span class="truncate">Settings</span>
+            </a>
+
+            <p class="px-2 pt-4 pb-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground/70">
+              NAB Benchmark Lab
+            </p>
+            <a id="browseNabSidebarBtn" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+              </svg>
+              <span class="truncate">NAB Corpus (58)</span>
+            </a>
+            <a data-nav="anomalies" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#anomalies">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="M12 8v4"></path>
+                <path d="M12 16h.01"></path>
+              </svg>
+              <span class="truncate">Anomalies</span>
+              <span class="ml-auto rounded-full bg-signal/15 px-1.5 py-0.5 text-[10px] font-medium text-signal">Review</span>
+            </a>
+            <a data-nav="models" class="group relative flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 text-muted-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer" href="#models">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flask-conical h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground">
+                <path d="M10 2v7.31L4.75 20.2A1 1 0 0 0 5.6 22h12.8a1 1 0 0 0 .85-1.8L14 9.31V2"></path>
+                <path d="M8.5 2h7"></path>
+                <path d="M14 9.3 17 14"></path>
+              </svg>
+              <span class="truncate">Model lab</span>
+            </a>
+          </nav>
+
+          <!-- Sidebar Footer / Interactive Demo & Pipeline Health -->
+          <div class="border-t border-sidebar-border p-3 space-y-2">
+            <button id="launchDemoBtn" type="button" class="flex w-full items-center justify-center gap-1.5 rounded-md bg-iris px-2 py-1.5 text-[11px] font-semibold text-iris-foreground transition-opacity hover:opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+              Interactive demo
+            </button>
+            <div class="rounded-lg border border-sidebar-border bg-sidebar-accent/40 p-2.5 text-[11px]">
+              <div class="flex items-center justify-between text-muted-foreground">
+                <span class="flex items-center gap-1.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-success animate-pulse"></span>
+                  GitHub sync live
+                </span>
+                <span class="font-mono text-[10px] text-signal">ea702d7</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 px-1 pt-1">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full bg-signal/20 font-mono text-[11px] font-bold text-signal">
+                AM
+              </span>
+              <div class="min-w-0 flex-1 leading-tight">
+                <p class="truncate text-[12px] font-medium text-foreground">Alex Morgan</p>
+                <p class="truncate text-[10px] text-muted-foreground">Research workspace</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Layout Body -->
+      <div class="flex flex-1 flex-col lg:pl-64">
+        <!-- Sticky Topbar Header -->
+        <header class="sticky top-0 z-30 border-b border-border/70 bg-background/80 backdrop-blur-md">
+          <div class="flex h-16 items-center gap-3 px-4 sm:px-6">
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuToggle" type="button" class="rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground lg:hidden" aria-label="Open navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-5 w-5">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+
+            <!-- Header Title -->
+            <div class="hidden min-w-0 flex-1 items-center gap-2.5 sm:flex">
+              <h1 id="topbarTitle" class="truncate text-sm font-semibold tracking-tight text-foreground">Sentinel / Overview</h1>
+              <!-- GitHub Connection Badge Button -->
+              <button id="githubStatusBtn" type="button" class="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/70 px-2.5 py-0.5 text-[11px] text-foreground hover:border-signal/50 transition-colors" title="Connected to numenta/NAB @ ea702d7">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" class="text-foreground">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                <span class="font-mono text-[10px] text-muted-foreground">numenta/NAB</span>
+                <span class="github-dot h-1.5 w-1.5 rounded-full bg-success animate-pulse"></span>
+                <span class="font-mono text-[10px] text-signal font-semibold">ea702d7</span>
+              </button>
+            </div>
+
+            <!-- Topbar Right Actions -->
+            <div class="ml-auto flex items-center gap-2">
+              <!-- Browse NAB Corpus Button -->
+              <button id="browseNabBtn" type="button" class="hidden sm:inline-flex h-9 items-center gap-1.5 rounded-lg border border-signal/40 bg-signal/10 px-3 text-[12px] font-medium text-signal transition-colors hover:bg-signal/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                </svg>
+                Corpus (58)
+              </button>
+
+              <!-- Stream Selector in Header -->
+              <select id="dsSelectHeader" class="h-9 rounded-lg border border-border bg-card/70 px-2.5 text-[12px] text-foreground outline-none transition-colors hover:border-border focus:border-signal/60 max-w-[200px] sm:max-w-[240px]">
+                <!-- Populated dynamically with optgroups -->
+              </select>
+
+              <!-- Launch Demo Header Button -->
+              <button id="launchDemoHeaderBtn" type="button" class="hidden md:inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-[12px] font-medium transition-colors border border-border bg-card/70 text-foreground hover:border-iris/40 hover:text-iris">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play">
+                  <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                </svg>
+                Launch demo
+              </button>
+
+              <!-- Notifications Button -->
+              <button id="notificationsBtn" type="button" class="relative rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" aria-label="Notifications">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell h-4 w-4">
+                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                </svg>
+                <span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-signal"></span>
+              </button>
+
+              <!-- Session Menu Button -->
+              <button type="button" class="flex items-center gap-1.5 rounded-lg border border-border bg-card/70 px-2.5 py-1 text-[12px] text-foreground transition-colors hover:border-border">
+                <span class="h-2 w-2 rounded-full bg-success"></span>
+                <span>Sentinel Live</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Main Page Content -->
+        <main id="main" class="mx-auto w-full max-w-[1560px] px-4 py-6 sm:px-6 lg:px-8">
+          <div id="routeView" class="w-full">
+      <div class="space-y-6 animate-fade-in pb-12">
+        <!-- HERO SECTION: MAIN HEADING IN EXACT CENTER OF PAGE WITH LARGE, BOLD FONT -->
+        <section class="relative overflow-hidden rounded-2xl border border-border/80 bg-gradient-to-b from-card/90 via-card/60 to-card/40 p-8 sm:p-12 text-center shadow-xl backdrop-blur-md">
+          <!-- Subtle ambient glow -->
+          <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 h-80 w-96 rounded-full bg-signal/15 blur-3xl opacity-60"></div>
+          <div class="pointer-events-none absolute -bottom-24 left-1/3 h-64 w-80 rounded-full bg-iris/15 blur-3xl opacity-40"></div>
+
+          <div class="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center text-center">
+            <!-- Top brand pill -->
+            <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-signal/40 bg-signal/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-signal">
+              <span class="h-2 w-2 rounded-full bg-warn animate-pulse"></span>
+              Sentinel Anomaly Telemetry ┬╖ NAB Benchmark
+            </div>
+
+            <!-- EXACT REQUIRED HEADING IN EXACT CENTER -->
+            <h1 class="text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-center">
+              Live Stream Monitoring Dashboard
+            </h1>
+
+            <!-- SHORT SUBTITLE BENEATH THE HEADING -->
+            <p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base text-center">
+              Adaptive time-series anomaly detection, continuous wave telemetry, and explainable signal verification powered by the Numenta Anomaly Benchmark.
+            </p>
+
+            <!-- PROMINENT LIVE STREAM STATUS INDICATOR -->
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <div class="inline-flex items-center gap-3 rounded-xl border border-border/80 bg-background/80 px-4 py-2.5 shadow-sm backdrop-blur">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-warn opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-warn"></span>
+                </span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Status:</span>
+                <span id="overviewLiveStatus" class="font-mono text-xs font-bold text-foreground capitalize">Paused</span>
+                <span class="text-border">|</span>
+                <span class="font-mono text-xs text-signal">NAB Stream</span>
+                <span class="text-border">|</span>
+                <span class="font-mono text-xs text-muted-foreground">0 / 1,000 pts</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button type="button" data-nav="live" class="inline-flex items-center gap-2 rounded-lg bg-signal px-4 py-2.5 text-xs font-semibold text-signal-foreground transition-all hover:opacity-90 shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Open Live Stream ΓåÆ
+                </button>
+                <button id="overviewTogglePlayBtn" type="button" class="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card/80 px-3 py-2.5 text-xs font-medium text-foreground hover:bg-muted/40 transition-colors">
+                  Resume Stream
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4 KEY SUMMARY CARDS: STATUS, ACTIVE STREAMS, DETECTED EVENTS, SETTINGS -->
+        <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          
+      <article class="relative overflow-hidden rounded-xl border border-border/80 bg-card/60 p-4 transition-all duration-200 hover:border-signal/40 hover:bg-card/80 shadow-sm">
+        <div class="flex items-start justify-between gap-2">
+          <p class="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Live Stream Status</p>
+          <span class="text-muted-foreground/80"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-signal"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path><circle cx="12" cy="12" r="2"></circle><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path></svg></span>
+        </div>
+        <strong class="mt-2 block font-mono text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Paused</strong>
+        <p class="mt-1 text-[11px] text-muted-foreground leading-snug">Machine Temperature ┬╖ GitHub Sync ea702d7</p>
+      </article>
+    
+          
+      <article class="relative overflow-hidden rounded-xl border border-border/80 bg-card/60 p-4 transition-all duration-200 hover:border-signal/40 hover:bg-card/80 shadow-sm">
+        <div class="flex items-start justify-between gap-2">
+          <p class="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Active Streams</p>
+          <span class="text-muted-foreground/80"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-iris"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg></span>
+        </div>
+        <strong class="mt-2 block font-mono text-2xl font-bold tracking-tight text-foreground sm:text-3xl">58 NAB Datasets</strong>
+        <p class="mt-1 text-[11px] text-muted-foreground leading-snug">1 currently streaming ┬╖ 12 recorded history sessions</p>
+      </article>
+    
+          
+      <article class="relative overflow-hidden rounded-xl border border-border/80 bg-card/60 p-4 transition-all duration-200 hover:border-signal/40 hover:bg-card/80 shadow-sm">
+        <div class="flex items-start justify-between gap-2">
+          <p class="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Detected Events</p>
+          <span class="text-muted-foreground/80"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-warn"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg></span>
+        </div>
+        <strong class="mt-2 block font-mono text-2xl font-bold tracking-tight text-foreground sm:text-3xl">0 Anomalies</strong>
+        <p class="mt-1 text-[11px] text-muted-foreground leading-snug">0 confirmed (100.0% precision) ┬╖ 0 critical</p>
+      </article>
+    
+          
+      <article class="relative overflow-hidden rounded-xl border border-border/80 bg-card/60 p-4 transition-all duration-200 hover:border-signal/40 hover:bg-card/80 shadow-sm">
+        <div class="flex items-start justify-between gap-2">
+          <p class="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Monitoring Settings</p>
+          <span class="text-muted-foreground/80"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-success"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+        </div>
+        <strong class="mt-2 block font-mono text-2xl font-bold tracking-tight text-foreground sm:text-3xl">k = 4.0╧â</strong>
+        <p class="mt-1 text-[11px] text-muted-foreground leading-snug">Speed: 45 ms/pt (~22.2 pts/s) ┬╖ Window: 60 pts</p>
+      </article>
+    
+        </section>
+
+        <!-- COMPACT PREVIEW OF RECENT STREAM ACTIVITY -->
+        <section class="rounded-xl border border-border/80 bg-card/60 p-5 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-border/60 pb-3">
+            <div>
+              <h2 class="text-sm font-semibold tracking-wide text-foreground">Recent Live Stream Waveform Activity</h2>
+              <p class="text-xs text-muted-foreground mt-0.5">
+                Trailing 0 observations in <span class="font-mono text-signal">current stream</span> against adaptive baseline.
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs">
+              <span class="inline-flex items-center gap-1.5 font-mono text-muted-foreground">
+                <span class="h-2 w-2 rounded-full bg-cyan-400"></span> Observed: <b class="text-foreground">ΓÇö</b>
+              </span>
+              <span class="inline-flex items-center gap-1.5 font-mono text-muted-foreground">
+                <span class="h-2 w-2 rounded-full bg-slate-400"></span> Expected: <b class="text-foreground">ΓÇö</b>
+              </span>
+              <span class="inline-flex items-center gap-1.5 font-mono text-muted-foreground">
+                <span class="h-2 w-2 rounded-full bg-purple-400"></span> Score: <b class="text-iris">0.00╧â</b>
+              </span>
+              <button type="button" data-nav="live" class="rounded-md border border-signal/40 bg-signal/10 px-2.5 py-1 font-semibold text-signal hover:bg-signal/20 transition-colors">
+                Inspect in Live Monitor ΓåÆ
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-4 h-36 w-full">
+            <svg viewBox="0 0 720 140" class="w-full h-full"><text x="360" y="70" text-anchor="middle" fill="#64748b" font-size="12">No observation data available</text></svg>
+          </div>
+
+          <div class="mt-3 flex flex-wrap items-center justify-between text-[11px] text-muted-foreground">
+            <span>Window start: #0 ┬╖ Current point: #0</span>
+            <span class="flex items-center gap-3">
+              <span class="inline-flex items-center gap-1">
+                <span class="h-2 w-2 rounded-full bg-cyan-400"></span> Continuous Signal
+              </span>
+              <span class="inline-flex items-center gap-1">
+                <span class="h-2 w-2 rounded-full bg-red-400"></span> Flagged Anomaly Event
+              </span>
+            </span>
+          </div>
+        </section>
+
+        <!-- SHORTCUT NAVIGATION CARDS TO ANALYTICS, STREAM HISTORY, LIVE STREAM, SETTINGS -->
+        <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a data-nav="analytics" class="group cursor-pointer rounded-xl border border-border/80 bg-card/60 p-5 transition-all duration-200 hover:border-signal/50 hover:bg-card/90 hover:shadow-md" href="#analytics">
+            <div class="flex items-center justify-between">
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-signal/15 text-signal transition-transform group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+              </span>
+              <span class="text-xs text-signal group-hover:translate-x-0.5 transition-transform">Explore ΓåÆ</span>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-foreground">Interactive Analytics</h3>
+            <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
+              Bar graphs of events over time, stream-wise comparisons, severity distributions, and telemetry statistics.
+            </p>
+          </a>
+
+          <a data-nav="history" class="group cursor-pointer rounded-xl border border-border/80 bg-card/60 p-5 transition-all duration-200 hover:border-iris/50 hover:bg-card/90 hover:shadow-md" href="#history">
+            <div class="flex items-center justify-between">
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-iris/15 text-iris transition-transform group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+              </span>
+              <span class="text-xs text-iris group-hover:translate-x-0.5 transition-transform">View 12 logs ΓåÆ</span>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-foreground">Stream History</h3>
+            <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
+              Search and filter previously recorded stream sessions, inspect timestamps, and load historical runs into monitor.
+            </p>
+          </a>
+
+          <a data-nav="live" class="group cursor-pointer rounded-xl border border-border/80 bg-card/60 p-5 transition-all duration-200 hover:border-success/50 hover:bg-card/90 hover:shadow-md" href="#live">
+            <div class="flex items-center justify-between">
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-success/15 text-success transition-transform group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path></svg>
+              </span>
+              <span class="text-xs text-success group-hover:translate-x-0.5 transition-transform">Monitor ΓåÆ</span>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-foreground">Live Stream Monitor</h3>
+            <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
+              Watch point-by-point dual canvas charts, dynamic threshold envelope, and explainable event clustering.
+            </p>
+          </a>
+
+          <a data-nav="settings" class="group cursor-pointer rounded-xl border border-border/80 bg-card/60 p-5 transition-all duration-200 hover:border-warn/50 hover:bg-card/90 hover:shadow-md" href="#settings">
+            <div class="flex items-center justify-between">
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-warn/15 text-warn transition-transform group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+              <span class="text-xs text-warn group-hover:translate-x-0.5 transition-transform">Configure ΓåÆ</span>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-foreground">Settings &amp; Thresholds</h3>
+            <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
+              Adjust detection threshold (k-sigma), wave speed controls (ms/pt and pts/s), baseline windows, and alerts.
+            </p>
+          </a>
+        </section>
+      </div>
+    </div><div class="space-y-4" hidden="">
+            <!-- Page Header Area -->
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="min-w-0">
+                <div class="flex flex-wrap items-center gap-2">
+                  <h2 class="text-lg font-semibold tracking-tight text-foreground">
+                    Live stream monitor
+                  </h2>
+                  <span id="dsBadge" class="inline-flex items-center gap-1 rounded-full border border-border bg-muted/40 px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">
+                    NAB ┬╖ Machine temperature
+                  </span>
+                  <span id="githubSourceBadge" class="rounded-full border border-signal/40 bg-signal/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-signal">
+                    Live GitHub
+                  </span>
+                  <span id="truthBadge" class="hidden rounded-full border border-warn/40 bg-warn/10 px-2 py-0.5 text-[10px] uppercase tracking-wider text-warn">
+                    No ground truth
+                  </span>
+                </div>
+                <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-muted-foreground">
+                  <p class="max-w-2xl leading-relaxed">
+                    Streaming point by point against the learned adaptive baseline with official ground truth labels from the Numenta Anomaly Benchmark.
+                  </p>
+                  <a id="currentGithubLink" href="https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/machine_temperature_system_failure.csv" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-signal hover:underline inline-flex items-center gap-1">
+                    View file on GitHub Γåù
+                  </a>
+                </div>
+              </div>
+
+              <!-- Data Stream Selector Label -->
+              <div class="flex flex-wrap items-center gap-2">
+                <label class="inline-flex flex-col gap-1 w-64">
+                  <span class="text-[10px] uppercase tracking-wider text-muted-foreground">Data stream</span>
+                  <select id="dsSelectMain" class="h-8 rounded-md border border-border bg-card/70 px-2 pr-6 text-[12px] text-foreground outline-none transition-colors hover:border-border focus:border-signal/60">
+                    <!-- Populated dynamically with optgroups -->
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <!-- SECTION 1: LIVE STREAM CHART PANEL -->
+            <section class="rounded-xl border border-border/80 bg-card/50">
+              <div class="space-y-3 p-4">
+                <!-- Stream Controls Bar -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <div class="flex items-center gap-1.5">
+                    <button id="playPauseBtn" type="button" class="inline-flex h-8 items-center gap-1.5 rounded-md bg-signal px-3 text-[12px] font-semibold text-signal-foreground transition-opacity hover:opacity-90">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pause h-3.5 w-3.5">
+                        <rect x="14" y="4" width="4" height="16" rx="1"></rect>
+                        <rect x="6" y="4" width="4" height="16" rx="1"></rect>
+                      </svg>
+                      Pause
+                    </button>
+                    <button id="resetBtn" type="button" class="inline-flex h-8 items-center gap-1.5 rounded-md border border-border bg-card/70 px-2.5 text-[12px] text-foreground transition-colors hover:border-signal/50 hover:text-signal disabled:cursor-not-allowed disabled:opacity-40" aria-label="Reset stream">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw h-3.5 w-3.5">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                        <path d="M3 3v5h5"></path>
+                      </svg>
+                      Reset
+                    </button>
+                  </div>
+
+                  <!-- Progress Bar and Points -->
+                  <div class="flex min-w-[180px] flex-1 items-center gap-2">
+                    <div class="h-1 flex-1 overflow-hidden rounded-full bg-muted">
+                      <div id="progressBar" class="h-full rounded-full bg-signal/80 transition-[width] duration-150" style="width: 36%"></div>
+                    </div>
+                    <span id="ptsCounter" class="whitespace-nowrap font-mono text-[10px] text-muted-foreground">
+                      360 / 1000 pts
+                    </span>
+                  </div>
+
+                  <!-- Real-time Status Pill -->
+                  <span id="streamStatusPill" class="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-muted/30 px-2 py-1 text-[10px] text-muted-foreground">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-radio h-3 w-3 animate-pulse-soft text-success">
+                      <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                      <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                      <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                    </svg>
+                    last 09:05:59 ┬╖ normal
+                  </span>
+                </div>
+
+                <!-- Legend Row -->
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] text-muted-foreground">
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="inline-block rounded-full" style="width: 8px; height: 8px; background: #22d3ee"></span>
+                      Observed value
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="inline-block rounded-full" style="width: 12px; height: 0; background: transparent; border-top: 2px dashed #64748b"></span>
+                      Learned baseline
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="inline-block rounded-full" style="width: 8px; height: 8px; background: #f87171"></span>
+                      Flagged point
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="inline-block rounded-full" style="width: 8px; height: 8px; background: #a78bfa"></span>
+                      Score
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="inline-block rounded-full" style="width: 12px; height: 0; background: transparent; border-top: 2px dashed #fb923c"></span>
+                      Adaptive threshold
+                    </span>
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="inline-block rounded-full" style="width: 8px; height: 8px; background: #fbbf24"></span>
+                      Labelled anomaly window
+                    </span>
+                  </div>
+
+                  <!-- Ground-truth checkbox & Upload Link -->
+                  <div class="flex items-center gap-3">
+                    <label class="inline-flex items-center gap-1.5 text-[11px] text-muted-foreground cursor-pointer">
+                      <input id="groundTruthCheckbox" type="checkbox" class="h-3 w-3 accent-cyan-400 cursor-pointer" checked="">
+                      Ground-truth windows
+                    </label>
+                    <a id="uploadSeriesLink" class="text-[11px] text-signal hover:underline cursor-pointer" href="#">
+                      Upload a series
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Dual Canvas Charts -->
+                <div class="space-y-1 relative">
+                  <!-- Top Signal Chart (Observed & Baseline) -->
+                  <div style="height: 300px; position: relative;">
+                    <canvas id="chartTopCanvas"></canvas>
+                  </div>
+
+                  <!-- Sub-header -->
+                  <p class="pt-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                    Anomaly score vs adaptive threshold
+                  </p>
+
+                  <!-- Bottom Score vs Threshold Chart -->
+                  <div style="height: 130px; position: relative;">
+                    <canvas id="chartBottomCanvas"></canvas>
+                  </div>
+                </div>
+
+                <!-- Chart Footer Source Note -->
+                <p id="sourceNote" class="text-[10px] text-muted-foreground">
+                  Source: numenta/NAB @ ea702d7 ┬╖ Machine temperature system failure. Point by point anomaly scoring.
+                </p>
+              </div>
+            </section>
+
+            <!-- SECTION 2 & 3: TWO-COLUMN CARDS (Events & Inspection) -->
+            <div class="grid gap-4 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)]">
+              <!-- Left Column: Flagged Events List -->
+              <section class="rounded-xl border border-border/80 bg-card/50">
+                <header class="flex flex-wrap items-start justify-between gap-3 border-b border-border/60 px-4 py-3">
+                  <div class="min-w-0">
+                    <h2 id="eventCountHeader" class="text-[13px] font-semibold tracking-wide text-foreground">
+                      Flagged events (1)
+                    </h2>
+                    <p id="streamingStatusHeader" class="mt-0.5 text-[11px] leading-relaxed text-muted-foreground">
+                      Streaming in progress
+                    </p>
+                  </div>
+                  <div class="flex shrink-0 items-center gap-2">
+                    <div class="flex gap-2">
+                      <label class="inline-flex flex-col gap-1">
+                        <select id="severityFilter" class="h-8 rounded-md border border-border bg-card/70 px-2 pr-6 text-[12px] text-foreground outline-none transition-colors hover:border-border focus:border-signal/60">
+                          <option value="all" selected="">All severities</option>
+                          <option value="critical">Critical</option>
+                          <option value="high">High</option>
+                          <option value="medium">Medium</option>
+                          <option value="low">Low</option>
+                        </select>
+                      </label>
+                      <label class="inline-flex flex-col gap-1">
+                        <select id="statusFilter" class="h-8 rounded-md border border-border bg-card/70 px-2 pr-6 text-[12px] text-foreground outline-none transition-colors hover:border-border focus:border-signal/60">
+                          <option value="all" selected="">All statuses</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="false_positive">False positive</option>
+                          <option value="unverified">Unverified</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                </header>
+                <div class="p-3">
+                  <div id="eventsList" class="max-h-[520px] space-y-2 overflow-y-auto pr-1">
+                    <!-- Populated dynamically by app.js -->
+                  </div>
+                </div>
+              </section>
+
+              <!-- Right Column: Inspection Panel -->
+              <section class="rounded-xl border border-border/80 bg-card/50">
+                <header class="flex flex-wrap items-start justify-between gap-3 border-b border-border/60 px-4 py-3">
+                  <div class="min-w-0">
+                    <h2 class="text-[13px] font-semibold tracking-wide text-foreground">
+                      Inspection
+                    </h2>
+                    <p class="mt-0.5 text-[11px] leading-relaxed text-muted-foreground">
+                      Why the selected event was flagged
+                    </p>
+                  </div>
+                </header>
+                <div id="inspectionPanel" class="p-4">
+                  <!-- Populated dynamically by app.js -->
+                </div>
+              </section>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Interactive Canvas Tooltip Element -->
+    <div id="chartTooltip" class="chart-tooltip-box fixed z-50 pointer-events-none hidden transition-opacity duration-150"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="fixed inset-0 z-50 lg:hidden hidden">
+      <div id="mobileDrawerBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity"></div>
+      <div class="fixed inset-y-0 left-0 w-72 max-w-[85vw] bg-sidebar border-r border-sidebar-border p-4 flex flex-col shadow-2xl z-10">
+        <div class="flex items-center justify-between pb-3 border-b border-sidebar-border">
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg border border-signal/30 bg-gradient-to-br from-signal/25 to-iris/25">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" class="text-signal">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="M12 8v4"></path>
+                <path d="M12 16h.01"></path>
+              </svg>
+            </span>
+            <span class="font-semibold text-foreground text-sm">Sentinel Telemetry</span>
+          </div>
+          <button id="closeMobileDrawer" class="rounded-md p-1 text-muted-foreground hover:text-foreground text-xl leading-none">
+            ├ù
+          </button>
+        </div>
+        <nav class="flex-1 space-y-1.5 overflow-y-auto py-4" id="mobileNavLinks">
+          <a data-mobile-nav="overview" href="#overview" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-sidebar-accent hover:text-foreground bg-signal/15 text-signal font-semibold">
+            Overview
+          </a>
+          <a data-mobile-nav="live" href="#live" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            Live stream
+          </a>
+          <a data-mobile-nav="history" href="#history" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            Stream history
+          </a>
+          <a data-mobile-nav="analytics" href="#analytics" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            Analytics
+          </a>
+          <a data-mobile-nav="settings" href="#settings" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            Settings
+          </a>
+          <div class="pt-3 border-t border-sidebar-border my-2"></div>
+          <a data-mobile-nav="corpus" id="browseNabMobileBtn" href="#" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            NAB Corpus (58)
+          </a>
+          <a data-mobile-nav="anomalies" href="#anomalies" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            Anomalies
+          </a>
+          <a data-mobile-nav="models" href="#models" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-sidebar-accent hover:text-foreground">
+            Model lab
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Stream History Session Details Modal -->
+    <div id="historyDetailModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm hidden p-4">
+      <div class="w-full max-w-3xl rounded-xl border border-border bg-card p-6 shadow-2xl flex flex-col max-h-[88vh] overflow-hidden">
+        <div class="flex items-start justify-between pb-3 border-b border-border/60">
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="histModalId" class="font-mono text-xs font-semibold px-2 py-0.5 rounded bg-signal/15 text-signal border border-signal/30">
+                STR-2026-0891
+              </span>
+              <h3 id="histModalTitle" class="text-base font-semibold text-foreground">Machine Temperature System Failure</h3>
+              <span id="histModalStatus" class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded border border-success/40 bg-success/15 text-success">Completed</span>
+            </div>
+            <p id="histModalDate" class="text-xs text-muted-foreground mt-1">Recorded on 2026-10-27 10:15 UTC ┬╖ Duration: 14m 20s</p>
+          </div>
+          <button id="closeHistoryDetailModal" class="text-muted-foreground hover:text-foreground text-2xl font-light leading-none">├ù</button>
+        </div>
+        
+        <div id="histModalBody" class="flex-1 overflow-y-auto py-4 space-y-4 pr-1">
+          <!-- Filled dynamically by route_fix.js -->
+        </div>
+
+        <div class="pt-3 border-t border-border/60 flex flex-wrap items-center justify-between gap-2">
+          <span class="text-xs text-muted-foreground">Historical stream session record</span>
+          <div class="flex items-center gap-2">
+            <button id="histModalCloseBtn" type="button" class="px-3 py-1.5 rounded-lg border border-border text-xs text-muted-foreground hover:text-foreground transition-colors">Close</button>
+            <button id="histModalLoadStreamBtn" type="button" class="px-3.5 py-1.5 rounded-lg bg-signal text-signal-foreground text-xs font-semibold hover:opacity-90 transition-opacity flex items-center gap-1.5">
+              Load into Live Stream Monitor ΓåÆ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden File Upload Input for Custom Series -->
+    <input type="file" id="fileUploadInput" class="hidden" accept=".csv,.txt,.tsv">
+
+    <!-- Notifications Modal Dialog -->
+    <div id="notificationsModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden">
+      <div class="w-full max-w-md rounded-xl border border-border bg-card p-5 shadow-2xl">
+        <div class="flex items-center justify-between pb-3 border-b border-border/60">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-signal">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+            </svg>
+            <h3 class="text-sm font-semibold text-foreground">Recent Stream Alerts</h3>
+          </div>
+          <button id="closeNotifications" class="text-muted-foreground hover:text-foreground text-lg">├ù</button>
+        </div>
+        <div id="notificationsList" class="py-4 space-y-2 max-h-80 overflow-y-auto">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- NAB Benchmark Corpus Explorer Modal -->
+    <div id="nabModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm hidden p-4">
+      <div class="w-full max-w-4xl rounded-xl border border-border bg-card p-6 shadow-2xl flex flex-col max-h-[88vh]">
+        <div class="flex items-start justify-between pb-4 border-b border-border/60">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-signal/15 text-signal font-bold">
+                NAB
+              </span>
+              <h3 class="text-base font-semibold text-foreground">Numenta Anomaly Benchmark (NAB) Corpus</h3>
+            </div>
+            <p class="text-[12px] text-muted-foreground mt-1">
+              Connected to <a href="https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data" target="_blank" rel="noopener noreferrer" class="text-signal underline">numenta/NAB/data @ ea702d7</a>. Stream any of the 58 datasets directly.
+            </p>
+          </div>
+          <button id="closeNabModal" class="text-muted-foreground hover:text-foreground text-2xl font-light leading-none">├ù</button>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="flex flex-wrap items-center gap-3 py-3 border-b border-border/40">
+          <input id="nabSearchInput" type="text" placeholder="Search datasets by name or filename..." class="flex-1 min-w-[220px] h-8 rounded-lg border border-border bg-muted/30 px-3 text-xs text-foreground outline-none focus:border-signal/60">
+          <select id="nabCategoryFilter" class="h-8 rounded-lg border border-border bg-muted/30 px-3 text-xs text-foreground outline-none focus:border-signal/60">
+            <option value="all">All Categories (58)</option>
+            <option value="realKnownCause">Real Known Causes (7)</option>
+            <option value="realAWSCloudwatch">Real AWS CloudWatch (17)</option>
+            <option value="realAdExchange">Real Ad Exchange (6)</option>
+            <option value="realTraffic">Real Traffic (7)</option>
+            <option value="realTweets">Real Twitter Volume (10)</option>
+            <option value="artificialWithAnomaly">Artificial With Anomaly (6)</option>
+            <option value="artificialNoAnomaly">Artificial No Anomaly (5)</option>
+          </select>
+        </div>
+
+        <!-- Datasets Table -->
+        <div class="flex-1 overflow-y-auto py-2 pr-1">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-border/60 text-[10px] uppercase tracking-wider text-muted-foreground">
+                <th class="py-2 px-3">Dataset Name &amp; GitHub Path</th>
+                <th class="py-2 px-3">Category</th>
+                <th class="py-2 px-3">Data Points</th>
+                <th class="py-2 px-3">Ground Truth</th>
+                <th class="py-2 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="nabTableBody" class="divide-y divide-border/20">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub Connection Inspector Modal -->
+    <div id="githubModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm hidden p-4">
+      <div class="w-full max-w-lg rounded-xl border border-border bg-card p-6 shadow-2xl space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-border/60">
+          <div class="flex items-center gap-2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-foreground">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+            </svg>
+            <h3 class="text-sm font-semibold text-foreground">GitHub Dataset Connection</h3>
+          </div>
+          <button id="closeGithubModal" class="text-muted-foreground hover:text-foreground text-xl">├ù</button>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <div class="rounded-lg border border-border/60 bg-muted/20 p-3 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-muted-foreground">Repository:</span>
+              <a href="https://github.com/numenta/NAB" target="_blank" rel="noopener noreferrer" class="font-mono text-signal hover:underline">
+                numenta/NAB Γåù
+              </a>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-muted-foreground">Commit Target:</span>
+              <a href="https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data" target="_blank" rel="noopener noreferrer" class="font-mono text-foreground hover:underline">
+                ea702d75cc2258d9... Γåù
+              </a>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-muted-foreground">Data Path:</span>
+              <span class="font-mono text-muted-foreground">/data (58 CSV benchmark files)</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-muted-foreground">Connection Status:</span>
+              <span id="githubPingLabel" class="font-mono text-success">Checking...</span>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="text-[11px] text-muted-foreground block">Data Fetch Mode:</label>
+            <select id="fetchModeSelect" class="w-full h-8 rounded-lg border border-border bg-card px-2.5 text-xs text-foreground outline-none focus:border-signal/60">
+              <option value="github" selected="">Live GitHub Remote (raw.githubusercontent.com)</option>
+              <option value="local">Local Fast Cache (data/nab/)</option>
+            </select>
+            <p class="text-[10px] text-muted-foreground pt-0.5">
+              In Live GitHub mode, series are streamed directly from the commit URL over HTTPS with automatic local fallback.
+            </p>
+          </div>
+
+          <div class="pt-2 flex justify-between gap-2">
+            <a href="https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs text-foreground hover:bg-muted/40 transition-colors">
+              Open Data Tree on GitHub Γåù
+            </a>
+            <button id="githubSyncBtn" type="button" class="inline-flex items-center gap-1.5 rounded-lg bg-signal/15 border border-signal/40 px-3 py-1.5 text-xs font-semibold text-signal hover:bg-signal/25 transition-colors">
+              Test GitHub Connection
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="nab_bundles.js"></script>
+    <script src="app.js"></script>
+    <script src="route_fix.js"></script>
+  
+
+</body></html>

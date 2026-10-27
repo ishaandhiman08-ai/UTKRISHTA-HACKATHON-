@@ -1,0 +1,1852 @@
+[
+  {
+    "id": "art_daily_no_noise",
+    "filename": "art_daily_no_noise.csv",
+    "category": "artificialNoAnomaly",
+    "name": "Art Daily No Noise",
+    "totalPoints": 4032,
+    "windowsCount": 0,
+    "windows": [],
+    "sampleMin": 20.0,
+    "sampleMax": 79.99996928,
+    "sampleAvg": 42.499960000016664,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialNoAnomaly/art_daily_no_noise.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_daily_no_noise.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_daily_no_noise.csv"
+  },
+  {
+    "id": "art_daily_perfect_square_wave",
+    "filename": "art_daily_perfect_square_wave.csv",
+    "category": "artificialNoAnomaly",
+    "name": "Art Daily Perfect Square Wave",
+    "totalPoints": 4032,
+    "windowsCount": 0,
+    "windows": [],
+    "sampleMin": 20.0,
+    "sampleMax": 80.0,
+    "sampleAvg": 42.5,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialNoAnomaly/art_daily_perfect_square_wave.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_daily_perfect_square_wave.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_daily_perfect_square_wave.csv"
+  },
+  {
+    "id": "art_daily_small_noise",
+    "filename": "art_daily_small_noise.csv",
+    "category": "artificialNoAnomaly",
+    "name": "Art Daily Small Noise",
+    "totalPoints": 4032,
+    "windowsCount": 0,
+    "windows": [],
+    "sampleMin": 18.0009640187,
+    "sampleMax": 87.97612832639999,
+    "sampleAvg": 42.43835333580657,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialNoAnomaly/art_daily_small_noise.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_daily_small_noise.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_daily_small_noise.csv"
+  },
+  {
+    "id": "art_flatline",
+    "filename": "art_flatline.csv",
+    "category": "artificialNoAnomaly",
+    "name": "Art Flatline",
+    "totalPoints": 4032,
+    "windowsCount": 0,
+    "windows": [],
+    "sampleMin": 45.0,
+    "sampleMax": 45.0,
+    "sampleAvg": 45.0,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialNoAnomaly/art_flatline.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_flatline.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_flatline.csv"
+  },
+  {
+    "id": "art_noisy",
+    "filename": "art_noisy.csv",
+    "category": "artificialNoAnomaly",
+    "name": "Art Noisy",
+    "totalPoints": 4032,
+    "windowsCount": 0,
+    "windows": [],
+    "sampleMin": 8.0005810963,
+    "sampleMax": 18.9964052577,
+    "sampleAvg": 13.489852983382738,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialNoAnomaly/art_noisy.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_noisy.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialNoAnomaly/art_noisy.csv"
+  },
+  {
+    "id": "art_daily_flatmiddle",
+    "filename": "art_daily_flatmiddle.csv",
+    "category": "artificialWithAnomaly",
+    "name": "Art Daily Flatmiddle",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2679,
+        "end": 3081,
+        "type": "nab_window",
+        "start_time": "2014-04-10 07:15:00.000000",
+        "end_time": "2014-04-11 16:45:00.000000"
+      }
+    ],
+    "sampleMin": -21.998788838600007,
+    "sampleMax": 87.9583481277,
+    "sampleAvg": 18.98114206645747,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialWithAnomaly/art_daily_flatmiddle.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_flatmiddle.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_flatmiddle.csv"
+  },
+  {
+    "id": "art_daily_jumpsdown",
+    "filename": "art_daily_jumpsdown.csv",
+    "category": "artificialWithAnomaly",
+    "name": "Art Daily Jumpsdown",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2787,
+        "end": 3189,
+        "type": "nab_window",
+        "start_time": "2014-04-10 16:15:00.000000",
+        "end_time": "2014-04-12 01:45:00.000000"
+      }
+    ],
+    "sampleMin": 18.0020399561,
+    "sampleMax": 87.9983818408,
+    "sampleAvg": 41.50977177882001,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialWithAnomaly/art_daily_jumpsdown.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_jumpsdown.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_jumpsdown.csv"
+  },
+  {
+    "id": "art_daily_jumpsup",
+    "filename": "art_daily_jumpsup.csv",
+    "category": "artificialWithAnomaly",
+    "name": "Art Daily Jumpsup",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2787,
+        "end": 3189,
+        "type": "nab_window",
+        "start_time": "2014-04-10 16:15:00.000000",
+        "end_time": "2014-04-12 01:45:00.000000"
+      }
+    ],
+    "sampleMin": 18.001009818,
+    "sampleMax": 164.947480513,
+    "sampleAvg": 44.494254155729905,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialWithAnomaly/art_daily_jumpsup.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_jumpsup.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_jumpsup.csv"
+  },
+  {
+    "id": "art_daily_nojump",
+    "filename": "art_daily_nojump.csv",
+    "category": "artificialWithAnomaly",
+    "name": "Art Daily Nojump",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2787,
+        "end": 3189,
+        "type": "nab_window",
+        "start_time": "2014-04-10 16:15:00.000000",
+        "end_time": "2014-04-12 01:45:00.000000"
+      }
+    ],
+    "sampleMin": 18.000500555,
+    "sampleMax": 87.9733135282,
+    "sampleAvg": 40.818300456750144,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialWithAnomaly/art_daily_nojump.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_nojump.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_daily_nojump.csv"
+  },
+  {
+    "id": "art_increase_spike_density",
+    "filename": "art_increase_spike_density.csv",
+    "category": "artificialWithAnomaly",
+    "name": "Art Increase Spike Density",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 1805,
+        "end": 2207,
+        "type": "nab_window",
+        "start_time": "2014-04-07 06:25:00.000000",
+        "end_time": "2014-04-08 15:55:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 20.0,
+    "sampleAvg": 0.42162698412698413,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialWithAnomaly/art_increase_spike_density.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_increase_spike_density.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_increase_spike_density.csv"
+  },
+  {
+    "id": "art_load_balancer_spikes",
+    "filename": "art_load_balancer_spikes.csv",
+    "category": "artificialWithAnomaly",
+    "name": "Art Load Balancer Spikes",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2734,
+        "end": 3136,
+        "type": "nab_window",
+        "start_time": "2014-04-10 11:50:00.000000",
+        "end_time": "2014-04-11 21:20:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 3.2248149307,
+    "sampleAvg": 0.10757168633464782,
+    "startTime": "2014-04-01 00:00:00",
+    "endTime": "2014-04-14 23:55:00",
+    "githubPath": "data/artificialWithAnomaly/art_load_balancer_spikes.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_load_balancer_spikes.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/artificialWithAnomaly/art_load_balancer_spikes.csv"
+  },
+  {
+    "id": "exchange-2_cpc_results",
+    "filename": "exchange-2_cpc_results.csv",
+    "category": "realAdExchange",
+    "name": "Exchange-2 Cpc Results",
+    "totalPoints": 1624,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 244,
+        "end": 406,
+        "type": "nab_window",
+        "start_time": "2011-07-11 04:00:01.000000",
+        "end_time": "2011-07-17 22:00:01.000000"
+      }
+    ],
+    "sampleMin": 0.0268430335097,
+    "sampleMax": 0.226597938144,
+    "sampleAvg": 0.10182260391185985,
+    "startTime": "2011-07-01 00:00:01",
+    "endTime": "2011-09-07 15:00:01",
+    "githubPath": "data/realAdExchange/exchange-2_cpc_results.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-2_cpc_results.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-2_cpc_results.csv"
+  },
+  {
+    "id": "exchange-2_cpm_results",
+    "filename": "exchange-2_cpm_results.csv",
+    "category": "realAdExchange",
+    "name": "Exchange-2 Cpm Results",
+    "totalPoints": 1624,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 565,
+        "end": 645,
+        "type": "nab_window",
+        "start_time": "2011-07-24 14:00:01.000000",
+        "end_time": "2011-07-27 22:00:01.000000"
+      },
+      {
+        "start": 934,
+        "end": 1014,
+        "type": "nab_window",
+        "start_time": "2011-08-09 00:00:01.000000",
+        "end_time": "2011-08-12 09:00:01.000000"
+      }
+    ],
+    "sampleMin": 0.000385004945833,
+    "sampleMax": 1.0514424748,
+    "sampleAvg": 0.33652251585485476,
+    "startTime": "2011-07-01 00:00:01",
+    "endTime": "2011-09-07 15:00:01",
+    "githubPath": "data/realAdExchange/exchange-2_cpm_results.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-2_cpm_results.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-2_cpm_results.csv"
+  },
+  {
+    "id": "exchange-3_cpc_results",
+    "filename": "exchange-3_cpc_results.csv",
+    "category": "realAdExchange",
+    "name": "Exchange-3 Cpc Results",
+    "totalPoints": 1538,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 271,
+        "end": 321,
+        "type": "nab_window",
+        "start_time": "2011-07-13 09:15:01.000000",
+        "end_time": "2011-07-15 11:15:01.000000"
+      },
+      {
+        "start": 413,
+        "end": 463,
+        "type": "nab_window",
+        "start_time": "2011-07-19 09:15:01.000000",
+        "end_time": "2011-07-21 11:15:01.000000"
+      },
+      {
+        "start": 952,
+        "end": 1002,
+        "type": "nab_window",
+        "start_time": "2011-08-12 07:15:01.000000",
+        "end_time": "2011-08-14 13:15:01.000000"
+      }
+    ],
+    "sampleMin": 0.0388988476312,
+    "sampleMax": 1.034,
+    "sampleAvg": 0.1372592718990712,
+    "startTime": "2011-07-01 00:15:01",
+    "endTime": "2011-09-07 14:15:01",
+    "githubPath": "data/realAdExchange/exchange-3_cpc_results.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-3_cpc_results.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-3_cpc_results.csv"
+  },
+  {
+    "id": "exchange-3_cpm_results",
+    "filename": "exchange-3_cpm_results.csv",
+    "category": "realAdExchange",
+    "name": "Exchange-3 Cpm Results",
+    "totalPoints": 1538,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 1045,
+        "end": 1197,
+        "type": "nab_window",
+        "start_time": "2011-08-16 10:15:01.000000",
+        "end_time": "2011-08-23 00:15:01.000000"
+      }
+    ],
+    "sampleMin": 0.320650020989,
+    "sampleMax": 5.49754000266,
+    "sampleAvg": 0.7727901325892576,
+    "startTime": "2011-07-01 00:15:01",
+    "endTime": "2011-09-07 14:15:01",
+    "githubPath": "data/realAdExchange/exchange-3_cpm_results.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-3_cpm_results.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-3_cpm_results.csv"
+  },
+  {
+    "id": "exchange-4_cpc_results",
+    "filename": "exchange-4_cpc_results.csv",
+    "category": "realAdExchange",
+    "name": "Exchange-4 Cpc Results",
+    "totalPoints": 1643,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 340,
+        "end": 394,
+        "type": "nab_window",
+        "start_time": "2011-07-15 06:15:01.000000",
+        "end_time": "2011-07-17 12:15:01.000000"
+      },
+      {
+        "start": 749,
+        "end": 803,
+        "type": "nab_window",
+        "start_time": "2011-08-01 07:15:01.000000",
+        "end_time": "2011-08-03 15:15:01.000000"
+      },
+      {
+        "start": 1249,
+        "end": 1303,
+        "type": "nab_window",
+        "start_time": "2011-08-22 05:15:01.000000",
+        "end_time": "2011-08-24 11:15:01.000000"
+      }
+    ],
+    "sampleMin": 0.0238837042355,
+    "sampleMax": 3.12685185185,
+    "sampleAvg": 0.0864391573507037,
+    "startTime": "2011-07-01 00:15:01",
+    "endTime": "2011-09-07 14:15:01",
+    "githubPath": "data/realAdExchange/exchange-4_cpc_results.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-4_cpc_results.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-4_cpc_results.csv"
+  },
+  {
+    "id": "exchange-4_cpm_results",
+    "filename": "exchange-4_cpm_results.csv",
+    "category": "realAdExchange",
+    "name": "Exchange-4 Cpm Results",
+    "totalPoints": 1643,
+    "windowsCount": 4,
+    "windows": [
+      {
+        "start": 347,
+        "end": 387,
+        "type": "nab_window",
+        "start_time": "2011-07-15 13:15:01.000000",
+        "end_time": "2011-07-17 05:15:01.000000"
+      },
+      {
+        "start": 729,
+        "end": 769,
+        "type": "nab_window",
+        "start_time": "2011-07-31 11:15:01.000000",
+        "end_time": "2011-08-02 05:15:01.000000"
+      },
+      {
+        "start": 1256,
+        "end": 1296,
+        "type": "nab_window",
+        "start_time": "2011-08-22 12:15:01.000000",
+        "end_time": "2011-08-24 04:15:01.000000"
+      },
+      {
+        "start": 1381,
+        "end": 1421,
+        "type": "nab_window",
+        "start_time": "2011-08-27 17:15:01.000000",
+        "end_time": "2011-08-29 09:15:01.000000"
+      }
+    ],
+    "sampleMin": 0.121520122218,
+    "sampleMax": 16.4381996801,
+    "sampleAvg": 0.5338304411440268,
+    "startTime": "2011-07-01 00:15:01",
+    "endTime": "2011-09-07 14:15:01",
+    "githubPath": "data/realAdExchange/exchange-4_cpm_results.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-4_cpm_results.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAdExchange/exchange-4_cpm_results.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_24ae8d",
+    "filename": "ec2_cpu_utilization_24ae8d.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization 24Ae8D",
+    "totalPoints": 4032,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 3447,
+        "end": 3647,
+        "type": "nab_window",
+        "start_time": "2014-02-26 13:45:00.000000",
+        "end_time": "2014-02-27 06:25:00.000000"
+      },
+      {
+        "start": 3677,
+        "end": 3877,
+        "type": "nab_window",
+        "start_time": "2014-02-27 08:55:00.000000",
+        "end_time": "2014-02-28 01:35:00.000000"
+      }
+    ],
+    "sampleMin": 0.066,
+    "sampleMax": 2.344,
+    "sampleAvg": 0.1263030753968254,
+    "startTime": "2014-02-14 14:30:00",
+    "endTime": "2014-02-28 14:25:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_53ea38",
+    "filename": "ec2_cpu_utilization_53ea38.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization 53Ea38",
+    "totalPoints": 4032,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 1396,
+        "end": 1596,
+        "type": "nab_window",
+        "start_time": "2014-02-19 10:50:00.000000",
+        "end_time": "2014-02-20 03:30:00.000000"
+      },
+      {
+        "start": 2559,
+        "end": 2759,
+        "type": "nab_window",
+        "start_time": "2014-02-23 11:45:00.000000",
+        "end_time": "2014-02-24 04:25:00.000000"
+      }
+    ],
+    "sampleMin": 1.604,
+    "sampleMax": 2.656,
+    "sampleAvg": 1.8295550595238095,
+    "startTime": "2014-02-14 14:30:00",
+    "endTime": "2014-02-28 14:25:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_53ea38.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_5f5533",
+    "filename": "ec2_cpu_utilization_5f5533.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization 5F5533",
+    "totalPoints": 4032,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 1171,
+        "end": 1371,
+        "type": "nab_window",
+        "start_time": "2014-02-18 16:02:00.000000",
+        "end_time": "2014-02-19 08:42:00.000000"
+      },
+      {
+        "start": 2830,
+        "end": 3030,
+        "type": "nab_window",
+        "start_time": "2014-02-24 10:17:00.000000",
+        "end_time": "2014-02-25 02:57:00.000000"
+      }
+    ],
+    "sampleMin": 34.766,
+    "sampleMax": 68.092,
+    "sampleAvg": 43.11037160218254,
+    "startTime": "2014-02-14 14:27:00",
+    "endTime": "2014-02-28 14:22:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_77c1ca",
+    "filename": "ec2_cpu_utilization_77c1ca.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization 77C1Ca",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 1765,
+        "end": 2167,
+        "type": "nab_window",
+        "start_time": "2014-04-08 17:30:00.000000",
+        "end_time": "2014-04-10 03:00:00.000000"
+      }
+    ],
+    "sampleMin": 0.064,
+    "sampleMax": 99.898,
+    "sampleAvg": 10.518176091269842,
+    "startTime": "2014-04-02 14:25:00",
+    "endTime": "2014-04-16 14:20:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_77c1ca.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_825cc2",
+    "filename": "ec2_cpu_utilization_825cc2.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization 825Cc2",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 1526,
+        "end": 1868,
+        "type": "nab_window",
+        "start_time": "2014-04-15 07:24:00.000000",
+        "end_time": "2014-04-16 11:54:00.000000"
+      }
+    ],
+    "sampleMin": 18.7225,
+    "sampleMax": 99.118,
+    "sampleAvg": 89.7912622767857,
+    "startTime": "2014-04-10 00:04:00",
+    "endTime": "2014-04-24 00:09:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_825cc2.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_ac20cd",
+    "filename": "ec2_cpu_utilization_ac20cd.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization Ac20Cd",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 3374,
+        "end": 3776,
+        "type": "nab_window",
+        "start_time": "2014-04-14 07:49:00.000000",
+        "end_time": "2014-04-15 17:34:00.000000"
+      }
+    ],
+    "sampleMin": 2.464,
+    "sampleMax": 99.742,
+    "sampleAvg": 40.985085193452385,
+    "startTime": "2014-04-02 14:29:00",
+    "endTime": "2014-04-16 14:49:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_ac20cd.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_c6585a",
+    "filename": "ec2_cpu_utilization_c6585a.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization C6585A",
+    "totalPoints": 4032,
+    "windowsCount": 0,
+    "windows": [],
+    "sampleMin": 0.062,
+    "sampleMax": 1.6019999999999999,
+    "sampleAvg": 0.0869484126984127,
+    "startTime": "2014-04-02 14:29:00",
+    "endTime": "2014-04-16 14:24:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_c6585a.csv"
+  },
+  {
+    "id": "ec2_cpu_utilization_fe7f93",
+    "filename": "ec2_cpu_utilization_fe7f93.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Cpu Utilization Fe7F93",
+    "totalPoints": 4032,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 698,
+        "end": 832,
+        "type": "nab_window",
+        "start_time": "2014-02-17 00:37:00.000000",
+        "end_time": "2014-02-17 11:47:00.000000"
+      },
+      {
+        "start": 2064,
+        "end": 2198,
+        "type": "nab_window",
+        "start_time": "2014-02-21 18:27:00.000000",
+        "end_time": "2014-02-22 05:37:00.000000"
+      },
+      {
+        "start": 2535,
+        "end": 2669,
+        "type": "nab_window",
+        "start_time": "2014-02-23 09:42:00.000000",
+        "end_time": "2014-02-23 20:52:00.000000"
+      }
+    ],
+    "sampleMin": 1.8,
+    "sampleMax": 99.66799999999999,
+    "sampleAvg": 5.77896378968254,
+    "startTime": "2014-02-14 14:27:00",
+    "endTime": "2014-02-28 14:22:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_cpu_utilization_fe7f93.csv"
+  },
+  {
+    "id": "ec2_disk_write_bytes_1ef3de",
+    "filename": "ec2_disk_write_bytes_1ef3de.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Disk Write Bytes 1Ef3De",
+    "totalPoints": 4730,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2399,
+        "end": 2871,
+        "type": "nab_window",
+        "start_time": "2014-03-10 01:29:00.000000",
+        "end_time": "2014-03-11 16:49:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 547457000.0,
+    "sampleAvg": 6581560.767484144,
+    "startTime": "2014-03-01 17:34:00",
+    "endTime": "2014-03-18 03:39:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_disk_write_bytes_1ef3de.csv"
+  },
+  {
+    "id": "ec2_disk_write_bytes_c0d644",
+    "filename": "ec2_disk_write_bytes_c0d644.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Disk Write Bytes C0D644",
+    "totalPoints": 4032,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 1794,
+        "end": 1928,
+        "type": "nab_window",
+        "start_time": "2014-04-08 19:55:00.000000",
+        "end_time": "2014-04-09 07:05:00.000000"
+      },
+      {
+        "start": 2239,
+        "end": 2373,
+        "type": "nab_window",
+        "start_time": "2014-04-10 09:00:00.000000",
+        "end_time": "2014-04-10 20:10:00.000000"
+      },
+      {
+        "start": 2964,
+        "end": 3098,
+        "type": "nab_window",
+        "start_time": "2014-04-12 21:25:00.000000",
+        "end_time": "2014-04-13 08:35:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 863964000.0,
+    "sampleAvg": 17331273.319295634,
+    "startTime": "2014-04-02 14:25:00",
+    "endTime": "2014-04-16 14:20:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_disk_write_bytes_c0d644.csv"
+  },
+  {
+    "id": "ec2_network_in_257a54",
+    "filename": "ec2_network_in_257a54.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Network In 257A54",
+    "totalPoints": 4032,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 1437,
+        "end": 1839,
+        "type": "nab_window",
+        "start_time": "2014-04-14 23:59:00.000000",
+        "end_time": "2014-04-16 09:29:00.000000"
+      }
+    ],
+    "sampleMin": 38516.6,
+    "sampleMax": 245126000.0,
+    "sampleAvg": 570809.8536954365,
+    "startTime": "2014-04-10 00:04:00",
+    "endTime": "2014-04-24 00:09:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_network_in_257a54.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_network_in_257a54.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_network_in_257a54.csv"
+  },
+  {
+    "id": "ec2_network_in_5abac7",
+    "filename": "ec2_network_in_5abac7.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Ec2 Network In 5Abac7",
+    "totalPoints": 4730,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 2490,
+        "end": 2726,
+        "type": "nab_window",
+        "start_time": "2014-03-10 09:06:00.000000",
+        "end_time": "2014-03-11 04:46:00.000000"
+      },
+      {
+        "start": 3091,
+        "end": 3327,
+        "type": "nab_window",
+        "start_time": "2014-03-12 11:11:00.000000",
+        "end_time": "2014-03-13 06:51:00.000000"
+      }
+    ],
+    "sampleMin": 42.0,
+    "sampleMax": 8285420.0,
+    "sampleAvg": 118714.64276955601,
+    "startTime": "2014-03-01 17:36:00",
+    "endTime": "2014-03-18 03:41:00",
+    "githubPath": "data/realAWSCloudwatch/ec2_network_in_5abac7.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_network_in_5abac7.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/ec2_network_in_5abac7.csv"
+  },
+  {
+    "id": "elb_request_count_8c0756",
+    "filename": "elb_request_count_8c0756.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Elb Request Count 8C0756",
+    "totalPoints": 4032,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 683,
+        "end": 883,
+        "type": "nab_window",
+        "start_time": "2014-04-12 09:04:00.000000",
+        "end_time": "2014-04-13 01:44:00.000000"
+      },
+      {
+        "start": 3582,
+        "end": 3782,
+        "type": "nab_window",
+        "start_time": "2014-04-22 11:14:00.000000",
+        "end_time": "2014-04-23 03:54:00.000000"
+      }
+    ],
+    "sampleMin": 1.0,
+    "sampleMax": 656.0,
+    "sampleAvg": 61.83705357142857,
+    "startTime": "2014-04-10 00:04:00",
+    "endTime": "2014-04-24 00:39:00",
+    "githubPath": "data/realAWSCloudwatch/elb_request_count_8c0756.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/elb_request_count_8c0756.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/elb_request_count_8c0756.csv"
+  },
+  {
+    "id": "grok_asg_anomaly",
+    "filename": "grok_asg_anomaly.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Grok Asg Anomaly",
+    "totalPoints": 4621,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 1177,
+        "end": 1199,
+        "type": "nab_window",
+        "start_time": "2014-01-20 02:05:00.000000",
+        "end_time": "2014-01-20 14:55:00.000000"
+      },
+      {
+        "start": 1492,
+        "end": 1646,
+        "type": "nab_window",
+        "start_time": "2014-01-21 04:20:00.000000",
+        "end_time": "2014-01-21 17:10:00.000000"
+      },
+      {
+        "start": 3676,
+        "end": 3830,
+        "type": "nab_window",
+        "start_time": "2014-01-28 18:20:00.000000",
+        "end_time": "2014-01-29 07:10:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 45.6229,
+    "sampleAvg": 27.684723438649645,
+    "startTime": "2014-01-16 00:00:00",
+    "endTime": "2014-02-01 01:00:00",
+    "githubPath": "data/realAWSCloudwatch/grok_asg_anomaly.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/grok_asg_anomaly.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/grok_asg_anomaly.csv"
+  },
+  {
+    "id": "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+    "filename": "iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Iio Us-East-1 I-A2Eb1Cd9 Networkin",
+    "totalPoints": 1243,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 218,
+        "end": 280,
+        "type": "nab_window",
+        "start_time": "2013-10-10 10:35:00.000000",
+        "end_time": "2013-10-10 15:45:00.000000"
+      },
+      {
+        "start": 308,
+        "end": 370,
+        "type": "nab_window",
+        "start_time": "2013-10-10 18:05:00.000000",
+        "end_time": "2013-10-10 23:15:00.000000"
+      }
+    ],
+    "sampleMin": 789781.0,
+    "sampleMax": 61519397.0,
+    "sampleAvg": 4615221.908447305,
+    "startTime": "2013-10-09 16:25:00",
+    "endTime": "2013-10-13 23:55:00",
+    "githubPath": "data/realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/iio_us-east-1_i-a2eb1cd9_NetworkIn.csv"
+  },
+  {
+    "id": "rds_cpu_utilization_cc0c53",
+    "filename": "rds_cpu_utilization_cc0c53.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Rds Cpu Utilization Cc0C53",
+    "totalPoints": 4032,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 2980,
+        "end": 3180,
+        "type": "nab_window",
+        "start_time": "2014-02-24 22:50:00.000000",
+        "end_time": "2014-02-25 15:35:00.000000"
+      },
+      {
+        "start": 3479,
+        "end": 3679,
+        "type": "nab_window",
+        "start_time": "2014-02-26 16:30:00.000000",
+        "end_time": "2014-02-27 09:10:00.000000"
+      }
+    ],
+    "sampleMin": 5.19,
+    "sampleMax": 25.1033,
+    "sampleAvg": 8.112208524305556,
+    "startTime": "2014-02-14 14:30:00",
+    "endTime": "2014-02-28 14:30:00",
+    "githubPath": "data/realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/rds_cpu_utilization_cc0c53.csv"
+  },
+  {
+    "id": "rds_cpu_utilization_e47b3b",
+    "filename": "rds_cpu_utilization_e47b3b.csv",
+    "category": "realAWSCloudwatch",
+    "name": "Rds Cpu Utilization E47B3B",
+    "totalPoints": 4032,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 846,
+        "end": 1046,
+        "type": "nab_window",
+        "start_time": "2014-04-12 22:32:00.000000",
+        "end_time": "2014-04-13 15:12:00.000000"
+      },
+      {
+        "start": 2485,
+        "end": 2685,
+        "type": "nab_window",
+        "start_time": "2014-04-18 15:07:00.000000",
+        "end_time": "2014-04-19 07:47:00.000000"
+      }
+    ],
+    "sampleMin": 12.628,
+    "sampleMax": 76.23,
+    "sampleAvg": 18.93486755952381,
+    "startTime": "2014-04-10 00:02:00",
+    "endTime": "2014-04-23 23:57:00",
+    "githubPath": "data/realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realAWSCloudwatch/rds_cpu_utilization_e47b3b.csv"
+  },
+  {
+    "id": "ambient_temperature_system_failure",
+    "filename": "ambient_temperature_system_failure.csv",
+    "category": "realKnownCause",
+    "name": "Ambient Temperature System Failure",
+    "totalPoints": 7267,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 3540,
+        "end": 3902,
+        "type": "nab_window",
+        "start_time": "2013-12-15 07:00:00.000000",
+        "end_time": "2013-12-30 09:00:00.000000"
+      },
+      {
+        "start": 5999,
+        "end": 6361,
+        "type": "nab_window",
+        "start_time": "2014-03-29 15:00:00.000000",
+        "end_time": "2014-04-20 22:00:00.000000"
+      }
+    ],
+    "sampleMin": 57.45840559,
+    "sampleMax": 86.22321261,
+    "sampleAvg": 71.24243270828815,
+    "startTime": "2013-07-04 00:00:00",
+    "endTime": "2014-05-28 15:00:00",
+    "githubPath": "data/realKnownCause/ambient_temperature_system_failure.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/ambient_temperature_system_failure.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/ambient_temperature_system_failure.csv"
+  },
+  {
+    "id": "cpu_utilization_asg_misconfiguration",
+    "filename": "cpu_utilization_asg_misconfiguration.csv",
+    "category": "realKnownCause",
+    "name": "Cpu Utilization Asg Misconfiguration",
+    "totalPoints": 18050,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 16551,
+        "end": 18049,
+        "type": "nab_window",
+        "start_time": "2014-07-10 12:29:00.000000",
+        "end_time": "2014-07-15 17:19:00.000000"
+      }
+    ],
+    "sampleMin": 11.529000000000002,
+    "sampleMax": 100.0,
+    "sampleAvg": 38.2827560498615,
+    "startTime": "2014-05-14 01:14:00",
+    "endTime": "2014-07-15 17:19:00",
+    "githubPath": "data/realKnownCause/cpu_utilization_asg_misconfiguration.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/cpu_utilization_asg_misconfiguration.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/cpu_utilization_asg_misconfiguration.csv"
+  },
+  {
+    "id": "ec2_request_latency_system_failure",
+    "filename": "ec2_request_latency_system_failure.csv",
+    "category": "realKnownCause",
+    "name": "Ec2 Request Latency System Failure",
+    "totalPoints": 4032,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 2014,
+        "end": 2148,
+        "type": "nab_window",
+        "start_time": "2014-03-14 03:31:00.000000",
+        "end_time": "2014-03-14 14:41:00.000000"
+      },
+      {
+        "start": 3328,
+        "end": 3462,
+        "type": "nab_window",
+        "start_time": "2014-03-18 17:06:00.000000",
+        "end_time": "2014-03-19 04:16:00.000000"
+      },
+      {
+        "start": 3956,
+        "end": 4031,
+        "type": "nab_window",
+        "start_time": "2014-03-20 21:26:00.000000",
+        "end_time": "2014-03-21 03:41:00.000000"
+      }
+    ],
+    "sampleMin": 22.864,
+    "sampleMax": 99.24799999999999,
+    "sampleAvg": 45.15587351190476,
+    "startTime": "2014-03-07 03:41:00",
+    "endTime": "2014-03-21 03:41:00",
+    "githubPath": "data/realKnownCause/ec2_request_latency_system_failure.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/ec2_request_latency_system_failure.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/ec2_request_latency_system_failure.csv"
+  },
+  {
+    "id": "machine_temperature_system_failure",
+    "filename": "machine_temperature_system_failure.csv",
+    "category": "realKnownCause",
+    "name": "Machine Temperature System Failure",
+    "totalPoints": 22695,
+    "windowsCount": 4,
+    "windows": [
+      {
+        "start": 2126,
+        "end": 2692,
+        "type": "nab_window",
+        "start_time": "2013-12-10 06:25:00.000000",
+        "end_time": "2013-12-12 05:35:00.000000"
+      },
+      {
+        "start": 3703,
+        "end": 4269,
+        "type": "nab_window",
+        "start_time": "2013-12-15 17:50:00.000000",
+        "end_time": "2013-12-17 17:00:00.000000"
+      },
+      {
+        "start": 16057,
+        "end": 16623,
+        "type": "nab_window",
+        "start_time": "2014-01-27 14:20:00.000000",
+        "end_time": "2014-01-29 13:30:00.000000"
+      },
+      {
+        "start": 19232,
+        "end": 19798,
+        "type": "nab_window",
+        "start_time": "2014-02-07 14:55:00.000000",
+        "end_time": "2014-02-09 14:05:00.000000"
+      }
+    ],
+    "sampleMin": 2.0847212059999998,
+    "sampleMax": 108.51054280000001,
+    "sampleAvg": 85.9264982106802,
+    "startTime": "2013-12-02 21:15:00",
+    "endTime": "2014-02-19 15:25:00",
+    "githubPath": "data/realKnownCause/machine_temperature_system_failure.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/machine_temperature_system_failure.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/machine_temperature_system_failure.csv"
+  },
+  {
+    "id": "nyc_taxi",
+    "filename": "nyc_taxi.csv",
+    "category": "realKnownCause",
+    "name": "Nyc Taxi",
+    "totalPoints": 10320,
+    "windowsCount": 5,
+    "windows": [
+      {
+        "start": 5839,
+        "end": 6045,
+        "type": "nab_window",
+        "start_time": "2014-10-30 15:30:00.000000",
+        "end_time": "2014-11-03 22:30:00.000000"
+      },
+      {
+        "start": 7080,
+        "end": 7286,
+        "type": "nab_window",
+        "start_time": "2014-11-25 12:00:00.000000",
+        "end_time": "2014-11-29 19:00:00.000000"
+      },
+      {
+        "start": 8423,
+        "end": 8629,
+        "type": "nab_window",
+        "start_time": "2014-12-23 11:30:00.000000",
+        "end_time": "2014-12-27 18:30:00.000000"
+      },
+      {
+        "start": 8731,
+        "end": 8937,
+        "type": "nab_window",
+        "start_time": "2014-12-29 21:30:00.000000",
+        "end_time": "2015-01-03 04:30:00.000000"
+      },
+      {
+        "start": 9977,
+        "end": 10183,
+        "type": "nab_window",
+        "start_time": "2015-01-24 20:30:00.000000",
+        "end_time": "2015-01-29 03:30:00.000000"
+      }
+    ],
+    "sampleMin": 8.0,
+    "sampleMax": 39197.0,
+    "sampleAvg": 15137.569379844961,
+    "startTime": "2014-07-01 00:00:00",
+    "endTime": "2015-01-31 23:30:00",
+    "githubPath": "data/realKnownCause/nyc_taxi.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/nyc_taxi.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/nyc_taxi.csv"
+  },
+  {
+    "id": "rogue_agent_key_hold",
+    "filename": "rogue_agent_key_hold.csv",
+    "category": "realKnownCause",
+    "name": "Rogue Agent Key Hold",
+    "totalPoints": 1882,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 669,
+        "end": 763,
+        "type": "nab_window",
+        "start_time": "2014-07-15 04:35:00.000000",
+        "end_time": "2014-07-15 13:25:00.000000"
+      },
+      {
+        "start": 1240,
+        "end": 1334,
+        "type": "nab_window",
+        "start_time": "2014-07-17 05:50:00.000000",
+        "end_time": "2014-07-18 06:45:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 0.8950121529999999,
+    "sampleAvg": 0.039577705065356,
+    "startTime": "2014-07-06 20:10:00",
+    "endTime": "2014-07-25 08:55:00",
+    "githubPath": "data/realKnownCause/rogue_agent_key_hold.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/rogue_agent_key_hold.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/rogue_agent_key_hold.csv"
+  },
+  {
+    "id": "rogue_agent_key_updown",
+    "filename": "rogue_agent_key_updown.csv",
+    "category": "realKnownCause",
+    "name": "Rogue Agent Key Updown",
+    "totalPoints": 5315,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 2243,
+        "end": 2507,
+        "type": "nab_window",
+        "start_time": "2014-07-14 17:00:00.000000",
+        "end_time": "2014-07-15 15:00:00.000000"
+      },
+      {
+        "start": 2877,
+        "end": 3141,
+        "type": "nab_window",
+        "start_time": "2014-07-16 21:50:00.000000",
+        "end_time": "2014-07-17 19:50:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 288.207531,
+    "sampleAvg": 0.4882717367253057,
+    "startTime": "2014-07-06 20:10:00",
+    "endTime": "2014-07-25 08:55:00",
+    "githubPath": "data/realKnownCause/rogue_agent_key_updown.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/rogue_agent_key_updown.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realKnownCause/rogue_agent_key_updown.csv"
+  },
+  {
+    "id": "occupancy_6005",
+    "filename": "occupancy_6005.csv",
+    "category": "realTraffic",
+    "name": "Occupancy 6005",
+    "totalPoints": 2380,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 1645,
+        "end": 1883,
+        "type": "nab_window",
+        "start_time": "2015-09-14 17:45:00.000000",
+        "end_time": "2015-09-15 17:24:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 22.28,
+    "sampleAvg": 4.495147058823529,
+    "startTime": "2015-09-01 13:45:00",
+    "endTime": "2015-09-17 16:24:00",
+    "githubPath": "data/realTraffic/occupancy_6005.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/occupancy_6005.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/occupancy_6005.csv"
+  },
+  {
+    "id": "occupancy_t4013",
+    "filename": "occupancy_t4013.csv",
+    "category": "realTraffic",
+    "name": "Occupancy T4013",
+    "totalPoints": 2500,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 2087,
+        "end": 2211,
+        "type": "nab_window",
+        "start_time": "2015-09-16 00:59:00.000000",
+        "end_time": "2015-09-16 13:19:00.000000"
+      },
+      {
+        "start": 2335,
+        "end": 2459,
+        "type": "nab_window",
+        "start_time": "2015-09-17 00:20:00.000000",
+        "end_time": "2015-09-17 13:10:00.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 43.06,
+    "sampleAvg": 7.24264,
+    "startTime": "2015-09-01 11:30:00",
+    "endTime": "2015-09-17 16:24:00",
+    "githubPath": "data/realTraffic/occupancy_t4013.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/occupancy_t4013.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/occupancy_t4013.csv"
+  },
+  {
+    "id": "speed_6005",
+    "filename": "speed_6005.csv",
+    "category": "realTraffic",
+    "name": "Speed 6005",
+    "totalPoints": 2500,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 2261,
+        "end": 2499,
+        "type": "nab_window",
+        "start_time": "2015-09-16 18:40:00.000000",
+        "end_time": "2015-09-17 16:24:00.000000"
+      }
+    ],
+    "sampleMin": 20.0,
+    "sampleMax": 109.0,
+    "sampleAvg": 81.9068,
+    "startTime": "2015-08-31 18:22:00",
+    "endTime": "2015-09-17 16:24:00",
+    "githubPath": "data/realTraffic/speed_6005.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/speed_6005.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/speed_6005.csv"
+  },
+  {
+    "id": "speed_7578",
+    "filename": "speed_7578.csv",
+    "category": "realTraffic",
+    "name": "Speed 7578",
+    "totalPoints": 1127,
+    "windowsCount": 4,
+    "windows": [
+      {
+        "start": 303,
+        "end": 331,
+        "type": "nab_window",
+        "start_time": "2015-09-11 15:34:00.000000",
+        "end_time": "2015-09-11 17:54:00.000000"
+      },
+      {
+        "start": 740,
+        "end": 768,
+        "type": "nab_window",
+        "start_time": "2015-09-15 13:26:00.000000",
+        "end_time": "2015-09-15 15:54:00.000000"
+      },
+      {
+        "start": 909,
+        "end": 937,
+        "type": "nab_window",
+        "start_time": "2015-09-16 13:04:00.000000",
+        "end_time": "2015-09-16 15:20:00.000000"
+      },
+      {
+        "start": 945,
+        "end": 973,
+        "type": "nab_window",
+        "start_time": "2015-09-16 16:00:00.000000",
+        "end_time": "2015-09-16 18:20:00.000000"
+      }
+    ],
+    "sampleMin": 1.0,
+    "sampleMax": 90.0,
+    "sampleAvg": 64.04880212954747,
+    "startTime": "2015-09-08 11:39:00",
+    "endTime": "2015-09-17 14:05:00",
+    "githubPath": "data/realTraffic/speed_7578.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/speed_7578.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/speed_7578.csv"
+  },
+  {
+    "id": "speed_t4013",
+    "filename": "speed_t4013.csv",
+    "category": "realTraffic",
+    "name": "Speed T4013",
+    "totalPoints": 2495,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 2084,
+        "end": 2208,
+        "type": "nab_window",
+        "start_time": "2015-09-16 00:44:00.000000",
+        "end_time": "2015-09-16 13:14:00.000000"
+      },
+      {
+        "start": 2335,
+        "end": 2459,
+        "type": "nab_window",
+        "start_time": "2015-09-17 00:30:00.000000",
+        "end_time": "2015-09-17 13:30:00.000000"
+      }
+    ],
+    "sampleMin": 11.0,
+    "sampleMax": 77.0,
+    "sampleAvg": 62.934268537074146,
+    "startTime": "2015-09-01 11:25:00",
+    "endTime": "2015-09-17 16:19:00",
+    "githubPath": "data/realTraffic/speed_t4013.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/speed_t4013.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/speed_t4013.csv"
+  },
+  {
+    "id": "TravelTime_387",
+    "filename": "TravelTime_387.csv",
+    "category": "realTraffic",
+    "name": "Traveltime 387",
+    "totalPoints": 2500,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 387,
+        "end": 469,
+        "type": "nab_window",
+        "start_time": "2015-07-27 10:56:00.000000",
+        "end_time": "2015-07-31 18:01:00.000000"
+      },
+      {
+        "start": 948,
+        "end": 1030,
+        "type": "nab_window",
+        "start_time": "2015-08-17 11:51:00.000000",
+        "end_time": "2015-08-20 01:54:00.000000"
+      },
+      {
+        "start": 1485,
+        "end": 1567,
+        "type": "nab_window",
+        "start_time": "2015-08-31 15:44:00.000000",
+        "end_time": "2015-09-01 13:06:00.000000"
+      }
+    ],
+    "sampleMin": 9.0,
+    "sampleMax": 5059.0,
+    "sampleAvg": 325.0936,
+    "startTime": "2015-07-10 14:24:00",
+    "endTime": "2015-09-17 17:10:00",
+    "githubPath": "data/realTraffic/TravelTime_387.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/TravelTime_387.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/TravelTime_387.csv"
+  },
+  {
+    "id": "TravelTime_451",
+    "filename": "TravelTime_451.csv",
+    "category": "realTraffic",
+    "name": "Traveltime 451",
+    "totalPoints": 2162,
+    "windowsCount": 1,
+    "windows": [
+      {
+        "start": 438,
+        "end": 654,
+        "type": "nab_window",
+        "start_time": "2015-08-09 17:57:00.000000",
+        "end_time": "2015-08-12 20:01:00.000000"
+      }
+    ],
+    "sampleMin": 22.0,
+    "sampleMax": 5578.0,
+    "sampleAvg": 327.22155411655876,
+    "startTime": "2015-07-28 11:56:00",
+    "endTime": "2015-09-17 17:09:00",
+    "githubPath": "data/realTraffic/TravelTime_451.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/TravelTime_451.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTraffic/TravelTime_451.csv"
+  },
+  {
+    "id": "Twitter_volume_AAPL",
+    "filename": "Twitter_volume_AAPL.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Aapl",
+    "totalPoints": 15902,
+    "windowsCount": 4,
+    "windows": [
+      {
+        "start": 1235,
+        "end": 1631,
+        "type": "nab_window",
+        "start_time": "2015-03-03 04:37:53.000000",
+        "end_time": "2015-03-04 13:37:53.000000"
+      },
+      {
+        "start": 2920,
+        "end": 3316,
+        "type": "nab_window",
+        "start_time": "2015-03-09 01:02:53.000000",
+        "end_time": "2015-03-10 10:02:53.000000"
+      },
+      {
+        "start": 4761,
+        "end": 5157,
+        "type": "nab_window",
+        "start_time": "2015-03-15 10:27:53.000000",
+        "end_time": "2015-03-16 19:27:53.000000"
+      },
+      {
+        "start": 9087,
+        "end": 9483,
+        "type": "nab_window",
+        "start_time": "2015-03-30 10:57:53.000000",
+        "end_time": "2015-03-31 19:57:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 13479.0,
+    "sampleAvg": 85.55232046283486,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-23 02:47:53",
+    "githubPath": "data/realTweets/Twitter_volume_AAPL.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_AAPL.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_AAPL.csv"
+  },
+  {
+    "id": "Twitter_volume_AMZN",
+    "filename": "Twitter_volume_AMZN.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Amzn",
+    "totalPoints": 15831,
+    "windowsCount": 4,
+    "windows": [
+      {
+        "start": 1796,
+        "end": 2190,
+        "type": "nab_window",
+        "start_time": "2015-03-05 03:22:53.000000",
+        "end_time": "2015-03-06 12:12:53.000000"
+      },
+      {
+        "start": 3538,
+        "end": 3932,
+        "type": "nab_window",
+        "start_time": "2015-03-11 04:32:53.000000",
+        "end_time": "2015-03-12 13:22:53.000000"
+      },
+      {
+        "start": 9598,
+        "end": 9992,
+        "type": "nab_window",
+        "start_time": "2015-04-01 05:32:53.000000",
+        "end_time": "2015-04-02 14:22:53.000000"
+      },
+      {
+        "start": 11409,
+        "end": 11803,
+        "type": "nab_window",
+        "start_time": "2015-04-07 12:27:53.000000",
+        "end_time": "2015-04-08 21:17:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 1673.0,
+    "sampleAvg": 53.29846503695281,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 20:52:53",
+    "githubPath": "data/realTweets/Twitter_volume_AMZN.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_AMZN.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_AMZN.csv"
+  },
+  {
+    "id": "Twitter_volume_CRM",
+    "filename": "Twitter_volume_CRM.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Crm",
+    "totalPoints": 15902,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 2872,
+        "end": 3402,
+        "type": "nab_window",
+        "start_time": "2015-03-08 21:02:53.000000",
+        "end_time": "2015-03-10 17:12:53.000000"
+      },
+      {
+        "start": 5800,
+        "end": 6330,
+        "type": "nab_window",
+        "start_time": "2015-03-19 01:02:53.000000",
+        "end_time": "2015-03-20 21:12:53.000000"
+      },
+      {
+        "start": 7768,
+        "end": 8298,
+        "type": "nab_window",
+        "start_time": "2015-03-25 21:02:53.000000",
+        "end_time": "2015-03-27 17:12:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 209.0,
+    "sampleAvg": 3.3493271286630613,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-23 02:47:53",
+    "githubPath": "data/realTweets/Twitter_volume_CRM.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_CRM.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_CRM.csv"
+  },
+  {
+    "id": "Twitter_volume_CVS",
+    "filename": "Twitter_volume_CVS.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Cvs",
+    "totalPoints": 15853,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 1462,
+        "end": 2193,
+        "type": "nab_window",
+        "start_time": "2015-03-03 23:32:53.000000",
+        "end_time": "2015-03-06 12:27:53.000000"
+      },
+      {
+        "start": 7775,
+        "end": 8171,
+        "type": "nab_window",
+        "start_time": "2015-03-25 21:37:53.000000",
+        "end_time": "2015-03-27 06:37:53.000000"
+      },
+      {
+        "start": 13349,
+        "end": 13745,
+        "type": "nab_window",
+        "start_time": "2015-04-14 06:07:53.000000",
+        "end_time": "2015-04-15 15:07:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 50.0,
+    "sampleAvg": 0.359616476376711,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 22:42:53",
+    "githubPath": "data/realTweets/Twitter_volume_CVS.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_CVS.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_CVS.csv"
+  },
+  {
+    "id": "Twitter_volume_FB",
+    "filename": "Twitter_volume_FB.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Fb",
+    "totalPoints": 15833,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 4614,
+        "end": 5404,
+        "type": "nab_window",
+        "start_time": "2015-03-14 22:12:53.000000",
+        "end_time": "2015-03-17 16:02:53.000000"
+      },
+      {
+        "start": 9926,
+        "end": 10716,
+        "type": "nab_window",
+        "start_time": "2015-04-02 08:52:53.000000",
+        "end_time": "2015-04-05 02:42:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 1258.0,
+    "sampleAvg": 17.811280237478684,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 21:02:53",
+    "githubPath": "data/realTweets/Twitter_volume_FB.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_FB.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_FB.csv"
+  },
+  {
+    "id": "Twitter_volume_GOOG",
+    "filename": "Twitter_volume_GOOG.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Goog",
+    "totalPoints": 15842,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 4106,
+        "end": 4743,
+        "type": "nab_window",
+        "start_time": "2015-03-13 03:52:53.000000",
+        "end_time": "2015-03-15 08:57:53.000000"
+      },
+      {
+        "start": 6728,
+        "end": 7124,
+        "type": "nab_window",
+        "start_time": "2015-03-22 06:22:53.000000",
+        "end_time": "2015-03-23 15:22:53.000000"
+      },
+      {
+        "start": 9399,
+        "end": 9795,
+        "type": "nab_window",
+        "start_time": "2015-03-31 12:57:53.000000",
+        "end_time": "2015-04-01 21:57:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 465.0,
+    "sampleAvg": 20.736396919580862,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 21:47:53",
+    "githubPath": "data/realTweets/Twitter_volume_GOOG.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_GOOG.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_GOOG.csv"
+  },
+  {
+    "id": "Twitter_volume_IBM",
+    "filename": "Twitter_volume_IBM.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Ibm",
+    "totalPoints": 15893,
+    "windowsCount": 2,
+    "windows": [
+      {
+        "start": 6812,
+        "end": 7606,
+        "type": "nab_window",
+        "start_time": "2015-03-22 13:22:53.000000",
+        "end_time": "2015-03-25 07:32:53.000000"
+      },
+      {
+        "start": 14848,
+        "end": 15642,
+        "type": "nab_window",
+        "start_time": "2015-04-19 11:02:53.000000",
+        "end_time": "2015-04-22 05:12:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 139.0,
+    "sampleAvg": 4.3902346945196,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-23 02:02:53",
+    "githubPath": "data/realTweets/Twitter_volume_IBM.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_IBM.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_IBM.csv"
+  },
+  {
+    "id": "Twitter_volume_KO",
+    "filename": "Twitter_volume_KO.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Ko",
+    "totalPoints": 15851,
+    "windowsCount": 3,
+    "windows": [
+      {
+        "start": 5970,
+        "end": 6498,
+        "type": "nab_window",
+        "start_time": "2015-03-19 15:12:53.000000",
+        "end_time": "2015-03-21 11:12:53.000000"
+      },
+      {
+        "start": 11568,
+        "end": 12096,
+        "type": "nab_window",
+        "start_time": "2015-04-08 01:42:53.000000",
+        "end_time": "2015-04-09 21:42:53.000000"
+      },
+      {
+        "start": 13190,
+        "end": 13718,
+        "type": "nab_window",
+        "start_time": "2015-04-13 16:52:53.000000",
+        "end_time": "2015-04-15 12:52:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 2241.0,
+    "sampleAvg": 11.397262002397325,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 22:32:53",
+    "githubPath": "data/realTweets/Twitter_volume_KO.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_KO.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_KO.csv"
+  },
+  {
+    "id": "Twitter_volume_PFE",
+    "filename": "Twitter_volume_PFE.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Pfe",
+    "totalPoints": 15858,
+    "windowsCount": 4,
+    "windows": [
+      {
+        "start": 950,
+        "end": 1346,
+        "type": "nab_window",
+        "start_time": "2015-03-02 04:52:53.000000",
+        "end_time": "2015-03-03 13:52:53.000000"
+      },
+      {
+        "start": 1396,
+        "end": 1792,
+        "type": "nab_window",
+        "start_time": "2015-03-03 18:02:53.000000",
+        "end_time": "2015-03-05 03:02:53.000000"
+      },
+      {
+        "start": 4101,
+        "end": 4497,
+        "type": "nab_window",
+        "start_time": "2015-03-13 03:27:53.000000",
+        "end_time": "2015-03-14 12:27:53.000000"
+      },
+      {
+        "start": 11346,
+        "end": 11742,
+        "type": "nab_window",
+        "start_time": "2015-04-07 07:12:53.000000",
+        "end_time": "2015-04-08 16:12:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 36.0,
+    "sampleAvg": 0.8665657712195737,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 23:07:53",
+    "githubPath": "data/realTweets/Twitter_volume_PFE.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_PFE.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_PFE.csv"
+  },
+  {
+    "id": "Twitter_volume_UPS",
+    "filename": "Twitter_volume_UPS.csv",
+    "category": "realTweets",
+    "name": "Twitter Volume Ups",
+    "totalPoints": 15866,
+    "windowsCount": 5,
+    "windows": [
+      {
+        "start": 1027,
+        "end": 1343,
+        "type": "nab_window",
+        "start_time": "2015-03-02 11:17:53.000000",
+        "end_time": "2015-03-03 13:37:53.000000"
+      },
+      {
+        "start": 1443,
+        "end": 1759,
+        "type": "nab_window",
+        "start_time": "2015-03-03 21:57:53.000000",
+        "end_time": "2015-03-05 00:17:53.000000"
+      },
+      {
+        "start": 1782,
+        "end": 2098,
+        "type": "nab_window",
+        "start_time": "2015-03-05 02:12:53.000000",
+        "end_time": "2015-03-06 04:32:53.000000"
+      },
+      {
+        "start": 7289,
+        "end": 7605,
+        "type": "nab_window",
+        "start_time": "2015-03-24 05:07:53.000000",
+        "end_time": "2015-03-25 07:27:53.000000"
+      },
+      {
+        "start": 8707,
+        "end": 9023,
+        "type": "nab_window",
+        "start_time": "2015-03-29 03:17:53.000000",
+        "end_time": "2015-03-30 05:37:53.000000"
+      }
+    ],
+    "sampleMin": 0.0,
+    "sampleMax": 231.0,
+    "sampleAvg": 5.456321694188832,
+    "startTime": "2015-02-26 21:42:53",
+    "endTime": "2015-04-22 23:47:53",
+    "githubPath": "data/realTweets/Twitter_volume_UPS.csv",
+    "githubRawUrl": "https://raw.githubusercontent.com/numenta/NAB/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_UPS.csv",
+    "githubTreeUrl": "https://github.com/numenta/NAB/tree/ea702d75cc2258d9d7dd35ca8e5e2539d71f3140/data/realTweets/Twitter_volume_UPS.csv"
+  }
+]
